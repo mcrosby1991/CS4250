@@ -1,17 +1,73 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>CS4250 Library Database</title>
+    <title> CS4250 Library Database</title>
   </head>
+  <style>
+   body{
+        border-style: solid;
+        border-width: 5px;
+       }
+   h2 {
+
+       font-family:"Courier New",Courier,Monospace;
+       font-size:300%;
+      }
+   b {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+     }
+   p {
+      border-style: solid;
+      border-width: 5px;
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+     }
+   ol {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+      }
+   td {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+      }
+  </style>
+
 <body>
-<p> <h2>Library Database</h2></p>
+<p> <h2 align ="center"><img src= https://s5.postimg.org/f7r25ukc7/dblogo.jpg alt="" width="100" height="100">Library Database</h2></p>
+
+<p align =center><b>Ad-hoc Query:</b></p>
+<form METHOD=POST ACTION="library.php">
+   <table>
+     <tr>
+       <td align = center>
+          <strong>Please enter your query here<br></strong>
+       </td>
+       <td>
+          <input type=text size=100 maxlength=140 name="query">
+       </td>
+     </tr>
+     <tr>
+       <td align = center>
+          <input type=reset value="Clear">
+       </td>
+       <td>
+          <input type=submit value="Submit">
+       </td>
+     </tr>
+   </table>
+</form>
+
+<p align = center>
 <b>Team Members:</b>
-<p>
+
   Alison Lopez </br>
   Mary Garcia </br>
   Stefan Suarez </br>
 </p>
-<p><b>Relations:</b></p>
+
+
+<p align = center><b>Relations:</b></p>
 <!--In the following, substitute actual names for Relation1, Relation2
 etc. Have as many entries as the number of relations in your project.
 Clicking a link on a relation name should execute an SQL query and list
@@ -28,7 +84,7 @@ clear (i.e., state which is an int and which is a char and so on).-->
   <li><a href="http://www.cs.csustan.edu/">... rest of your relations</a></li>
 </ol>
 
-<p><b>Queries:</b></p>
+<p align = center><b>Queries:</b></p>
 <!--In the following, add an English
 query description for each of the five queries that you created for Part 6 of
 your project.  Again, clicking a link on the query name should execute
@@ -51,7 +107,6 @@ put an English description of that query here.
 put an English description of that query here.
 </ol>
 
-<p><b>Ad-hoc Query:</b></p>
 <!--Provide a free-form box and two buttons called
 "Submit" and "Clear" here. The intent is that the user can enter most arbitrary
 SQL queries in the box and click the submit button. The action should be that you should
@@ -59,31 +114,11 @@ execute that query on the database and bring up the answers on a separate
 page, once again, in a neat, orderly fashion. Notice that the input
 can be most legal SQL queries (permissible under your DB system, of course).
 (SELECT, INSERT, and UPDATE should definitely be allowed.)
-
 The grader will use table names from your own documentation (Project Part 3, etc),
 so <strong>do not change the names of your tables</strong> unless you update all of your
 documentation to match the new names.  (Did you test your ad-hoc query form with a "like" query?) -->
 
-<form METHOD=POST ACTION="library.php">
-   <table>
-     <tr>
-       <td align = right>
-          <strong>Please enter your query here<br></strong>
-       </td>
-       <td>
-          <input type=text size=100 maxlength=140 name="query">
-       </td>
-     </tr>
-     <tr>
-       <td align = right>
-          <input type=reset value="Clear">
-       </td>
-       <td>
-          <input type=submit value="Submit">
-       </td>
-     </tr>
-   </table>
-</form>
+
 
 </body>
 </html>
