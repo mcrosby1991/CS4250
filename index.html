@@ -2,6 +2,7 @@
 <html>
   <head>
     <title> CS4250 Library Database</title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="styles/library.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
@@ -44,6 +45,136 @@
 
   <p align = center>
   <b>Team Members:</b>
+=======
+  </head>
+  <style>
+   body{
+        border-style: solid;
+        border-width: 5px;
+       }
+   h2 {
+
+       font-family:"Courier New",Courier,Monospace;
+       font-size:300%;
+      }
+   b {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+     }
+   p {
+      border-style: solid;
+      border-width: 5px;
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+     }
+   ol {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+      }
+   td {
+      font-family:"Courier New",Courier,Monospace;
+      font-size:100%;
+      }
+  </style>
+
+<body>
+<p> <h2 align ="center"><img src= https://s5.postimg.org/f7r25ukc7/dblogo.jpg alt="" width="100" height="100">Library Database</h2></p>
+
+<p align =center><b>Ad-hoc Query:</b></p>
+<form METHOD=POST ACTION="library.php">
+   <table>
+     <tr>
+       <td align = center>
+          <strong>Please enter your query here<br></strong>
+       </td>
+       <td>
+          <input type=text size=100 maxlength=140 name="query">
+       </td>
+     </tr>
+     <tr>
+       <td align = center>
+          <input type=reset value="Clear">
+       </td>
+       <td>
+          <input type=submit value="Submit">
+       </td>
+     </tr>
+   </table>
+</form>
+
+<p align = center>
+<b>Team Members:</b>
+
+  Alison Lopez </br>
+  Mary Garcia </br>
+  Stefan Suarez </br>
+</p>
+
+
+<p align = center><b>Relations:</b></p>
+<!--In the following, substitute actual names for Relation1, Relation2
+etc. Have as many entries as the number of relations in your project.
+Clicking a link on a relation name should execute an SQL query and list
+*all* the tuples in that particular relation (of course, the links below don't work).
+Your output should be presented on a separate web page in a neat,
+orderly fashion, one row for each tuple and columns plainly evident.
+Ensure that all columns have their headers listed and their data types are
+clear (i.e., state which is an int and which is a char and so on).-->
+<ol>
+  <li><a href="http://www.cs.csustan.edu/">LibraryUsers</a></li>
+  <li><a href="http://www.cs.csustan.edu/">LibraryWork</a></li>
+  <li><a href="http://www.cs.csustan.edu/">ISBN</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Books</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Periodicals</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Serialization</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Serialized</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Branch</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Shelf</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Repairers</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Rent</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Reserved</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Subscribed</a></li>
+  <li><a href="http://www.cs.csustan.edu/">LocatedAt</a></li>
+  <li><a href="http://www.cs.csustan.edu/">BeingRepaired</a></li>
+  <li><a href="http://www.cs.csustan.edu/">Review</a></li>
+</ol>
+
+<p align = center><b>Queries:</b></p>
+<!--In the following, add an English
+query description for each of the five queries that you created for Part 6 of
+your project.  Again, clicking a link on the query name should execute
+the appropriate SQL query and list the tuples that are the answer to
+that particular query.  Again, make sure your output is neatly ordered
+and column names and data types are evident. The output of the query
+should appear on a separate page.  Near the top of the page, above the tidily
+presented query output, <big><b>must be</b></big> the original SQL for your query.</i><p>
+-->
+<ol>
+<li><a href="http://www.cs.csustan.edu/">Query1</a>:
+As requested by the user, the query returns the average balance for all users that are currently blocked.
+<li><a href="http://www.cs.csustan.edu/">Query2</a>:
+As requested by the user, the query returns what sections hold the requested ISBN, what branches those sections are in and what the genre of those sections is.
+<li><a href="http://www.cs.csustan.edu/">Query3</a>:
+As requested by the user, this query returns a list of all the genres that have more than 2 sections dedicated to them in the library as well as how many sections those genres have.
+<li><a href="http://www.cs.csustan.edu/">Query4</a>:
+As requested by the user, the query returns all, distinct languages of the periodicals table.
+<li><a href="http://www.cs.csustan.edu/">Query5</a>:
+As requested by the user, the query returns the number of rented books due back in December 2016 before Christmas.
+</ol>
+
+<!--Provide a free-form box and two buttons called
+"Submit" and "Clear" here. The intent is that the user can enter most arbitrary
+SQL queries in the box and click the submit button. The action should be that you should
+execute that query on the database and bring up the answers on a separate
+page, once again, in a neat, orderly fashion. Notice that the input
+can be most legal SQL queries (permissible under your DB system, of course).
+(SELECT, INSERT, and UPDATE should definitely be allowed.)
+The grader will use table names from your own documentation (Project Part 3, etc),
+so <strong>do not change the names of your tables</strong> unless you update all of your
+documentation to match the new names.  (Did you test your ad-hoc query form with a "like" query?) -->
+
+
+>>>>>>> origin/master
 
     Alison Lopez </br>
     Mary Garcia </br>
