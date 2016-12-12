@@ -89,14 +89,14 @@ function main () {
               <tr>';
       $result = mysqli_query($Library, $_POST["query"]);
       $fieldinfo = mysqli_fetch_fields($result);
-      foreach ($finfo as $val) {
+      foreach ($fieldinfo as $val) {
           echo '<td>' . $val->name . '</td>';
       }
       echo '</tr>';
       while ($row = mysqli_fetch_row($result)) {
         echo '<tr>';
         for ($i=0; $i < count($row); $i++) {
-          echo '<td>' . $row[i] . '</td>';
+          echo '<td>' . $row[$i] . '</td>';
         }
         echo '</tr>';
       }
