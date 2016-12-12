@@ -69,11 +69,13 @@ function main () {
     include 'info.php';
 
     // Create connection
-    $Library = new mysqli("localhost", $username, $password);
+    $Library = new mysqli("localhost", $username, $password, "ssuarez");
     // Check connection
-    if ($Library->connect_error) {
-      die("Connection failed: " . $Library->connect_error);
+    if ($Library->connect_errno) {
+      echo "Failed to connect to MySQL: (" . $Library->connect_errno . ") " . $Library->connect_error;
+      //die("Connection failed: " . $Library->connect_error);
     }
+    echo $mysqli->host_info . "\n";
     //Make sure the data is secure.
     $querySafe = validateInput($_POST["query"]);
     if($querySafe) {
