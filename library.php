@@ -73,17 +73,37 @@ function main () {
     // Check connection
     if ($Library->connect_errno) {
       echo "Failed to connect to MySQL: (" . $Library->connect_errno . ") " . $Library->connect_error;
+      exit();
       //die("Connection failed: " . $Library->connect_error);
     }
-    echo $Library->host_info . "\n";
     //Make sure the data is secure.
     $querySafe = validateInput($_POST["query"]);
     if($querySafe) {
-      //Generate the data.
-      echo $_POST["query"];
-      //$result = $mysqli->query();
-      //$row = $result->fetch_assoc();
-      //echo htmlentities($row['_message']);
+      //Generate the page with data in a table and repeat the query at the top.
+      echo '<html>
+              <head>
+              </head>
+              <body>'
+              . $_POST["query"] . '</br>
+              <table>
+              <tr>';
+      $result = mysqli_query($Library, $_POST["query"]);
+      $fieldinfo = mysqli_fetch_fields($result);
+      foreach ($finfo as $val) {
+          echo '<td>' . $val->name . '</td>';
+      }
+      echo '</tr>';
+      while ($row = mysqli_fetch_row($result)) {
+        echo '<tr>';
+        for ($i=0; $i < count($row); $i++) {
+          echo '<td>' . $row[i] . '</td>';
+        }
+        echo '</tr>';
+      }
+      echo '</table>
+            </body>
+            </html>';
+      mysqli_free_result($result);
     } else {
       invalidRedirect();
     }
