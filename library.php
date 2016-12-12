@@ -75,7 +75,7 @@ function main () {
       echo "Failed to connect to MySQL: (" . $Library->connect_errno . ") " . $Library->connect_error;
       //die("Connection failed: " . $Library->connect_error);
     }
-    echo $mysqli->host_info . "\n";
+    echo $Library->host_info . "\n";
     //Make sure the data is secure.
     $querySafe = validateInput($_POST["query"]);
     if($querySafe) {
